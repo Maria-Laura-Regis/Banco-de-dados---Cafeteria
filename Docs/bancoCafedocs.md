@@ -1,20 +1,13 @@
-# 📊 Sistema de Gerenciamento Andes Café
+# 📊 Sistema de Gerenciamento  Café
 
-![Banner Andes Café](https://via.placeholder.com/1200x400/5C3317/FFFFFF?text=ANDES+CAFÉ+-+SISTEMA+DE+GERENCIAMENTO)
 
-## 📌 Índice
-1. [Visão Geral](#-visão-geral)
-2. [Diagrama do Banco](#-diagrama-do-banco)
-3. [Estrutura Completa](#-estrutura-completa)
-4. [Consultas Exemplo](#-consultas-exemplo)
-5. [Demonstração Prática](#-demonstração-prática)
-6. [Considerações Finais](#-considerações-finais)
+
 
 ---
 
 ## 🌐 Visão Geral
 
-O banco de dados `andes` é um sistema completo para gestão de redes de cafeterias desenvolvido como projeto acadêmico.
+O banco de dados é um sistema completo para gestão de redes de cafeterias desenvolvido como projeto acadêmico.
 
 **Principais funcionalidades:**
 - ✅ Cadastro de produtos e categorias
@@ -38,26 +31,7 @@ erDiagram
     PRODUTOS }|--|| FORNECEDORES : "fornecido por"
     FORNECEDORES ||--o{ FORNECEDORES_CONTATOS : "possui"
     FRANQUIAS }|--|| ESTADOS : "localizada em"
-    
-    
-CREATE TABLE `pedidos` (
-  `pedidoID` int(11) NOT NULL AUTO_INCREMENT,
-  `clienteID` int(11) NOT NULL,
-  `data_pedido` date NOT NULL,
-  `status_pedido` tinyint(3) NOT NULL,
-  PRIMARY KEY (`pedidoID`),
-  FOREIGN KEY (`clienteID`) REFERENCES `clientes`(`clienteID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-SELECT 
-    p.nomeproduto,
-    SUM(pi.quantidade) as total_vendido,
-    SUM(pi.quantidade * p.precounitario) as faturamento
-FROM produtos p
-JOIN pedidos_item pi ON p.produtoID = pi.produtoID
-GROUP BY p.nomeproduto
-ORDER BY total_vendido DESC
-LIMIT 5;
+```
 
 ## Tabela `clientes`
 
