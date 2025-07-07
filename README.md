@@ -36,4 +36,4 @@
 12 tabelas relacionadas com modelagem normalizada, incluindo:
 - `clientes`, `produtos`, `pedidos`, `fornecedores`, `franquias`, `categorias`, etc.
 
-> **Nota:** Este banco de dados foi desenvolvido como exercício do curso de **Desenvolvedor Web** do instrutor certificado Adobe **André Fontenelle**, representando um sistema completo para gestão de uma rede de cafeterias.
+> **Nota:** Este banco de dados foi  para exercício do curso de **Desenvolvedor Web** do instrutor certificado Adobe **André Fontenelle**.
